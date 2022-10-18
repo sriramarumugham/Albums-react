@@ -1,0 +1,12 @@
+.albumCard{
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 150px;
+    border: 1px solid red;
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+    border-radius: 6px;
+}   
