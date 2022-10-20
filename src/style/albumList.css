@@ -1,27 +1,66 @@
 .albumList {
   /* border: 1px solid black; */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 850px;
-  min-width: 425px;
   flex-wrap: wrap;
-  max-height: 600px;
-  margin: 1vh auto;
-  /* background-color: aliceblue; */
+  flex-direction: column;
+  align-items:center;
+  max-height: 800px;
+  max-width: 850px; 
+  margin:auto 100px;
+  width:fit-content; 
+  height: fit-content;
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1400px) {
   .albumList {
-    max-height: 800px;
+     max-height: 1000px;
+     margin:auto 90px;
+    /* max-width: 620px; */
+
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 1150px) {
   .albumList {
-    max-height: 1200px;
-    width: 450px;
+    max-height: 1100px;
+    margin:auto 120px;
+    /* width: 420px; */
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .albumList {
+    max-height: 1400px;
+    margin:auto 160px;
+    /* width: 420px; */
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .albumList {
+    max-height: 1600px;
+    margin:auto 100px;
+    /* width: 420px; */
+  }
+}
+@media only screen and (max-width: 750px) {
+  .albumList {
+    max-height: 1600px;
+    margin:auto 50px;
+    /* width: 420px; */
+  }
+}
+@media only screen and (max-width: 650px) {
+  .albumList {
+    max-height: 2300px;
+    margin:auto 100px;
+    /* width: 420px; */
+  }
+}
+@media only screen and (max-width: 520px) {
+  .albumList {
+    max-height: 5000px;
+   margin:auto 100px;
+    /* width: 420px; */
   }
 }

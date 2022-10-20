@@ -1,72 +1,100 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
-function AlbumCard({ style }) {
+import { deleteAsyncAlbum } from "../features/albums/albumSlice";
+
+import { updateAsyncAlbum } from "../features/albums/albumSlice";
+
+import { updateAlbum, deleteAlbum } from "../features/albums/albumSlice";
+
+function AlbumCard({ style, name, data }) {
   const [toggle, setToggle] = useState(false);
-  const [albumName, setAlbumName] = useState("Name");
-  const [hover , setHover]=useState(false);
+  const [albumName, setAlbumName] = useState(name);
+  const [hover, setHover] = useState(false);
+
+  const dispatch = useDispatch();
 
   return (
     <>
-      <div className="albumCard" style={style} onMouseOver={()=>setHover(!hover)}>
-
+      <div
+        className="albumCard"
+        style={style}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => {
+          if (toggle == false) {
+            setHover(false);
+          }
+        }}
+      >
         {toggle ? (
           <input
+         
             value={albumName}
             onChange={(e) => setAlbumName(e.target.value)}
-            style={{
-              fontSize: "24px",
-              borderRadius: "5px",
-              backgroundColor: "transparent",
-              border: "1px solid green",
-              padding: "10px 20px",
-              width: "100px",
-              margin: " 0px auto",
-            }}
+            
           />
         ) : (
-          <h3>Name</h3>
+          <h3>{name}</h3>
         )}
 
-         
-        
-        {toggle  ? (
+        {hover ? (
           <div className="buttonContainer">
-            <button
-              onClick={(e) => {
-                console.log(e.target);
-                setToggle(!toggle);
-                setAlbumName("Name");
-              }}
-            >
-              CANCEL
-            </button>
-            <button
-              onClick={(e) => {
-                console.log(e.target);
-              }}
-            >
-              SAVE
-            </button>
+            {toggle ? (
+              <>
+                <button
+                  className="iconButton"
+                  onClick={(e) => {
+                    console.log(e.target);
+                    setToggle(!toggle);
+                    setAlbumName("Name");
+                  }}
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button
+                 className="iconButton"
+                  onClick={(e) => {
+                    console.log(e.target);
+                    dispatch(updateAsyncAlbum(data));
+                    setToggle(false);
+                    const updatedAlbum = {
+                      title: albumName,
+                      id: data.id,
+                      userId: data.userId,
+                    };
+                    dispatch(updateAlbum({ updatedAlbum }));
+                  }}
+                >
+                  <i class="fa-solid fa-floppy-disk"></i>
+                </button>
+              </>
+            ) : (
+              <>
+                <button 
+                 className="iconButton"
+                  onClick={(e) => {
+                    console.log(e.target);
+                    setToggle(!toggle);
+                  }}
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>
+
+                </button>
+                <button
+                 className="iconButton"
+                  onClick={(e) => {
+                    console.log(e.target);
+                    dispatch(deleteAsyncAlbum(data.id));
+                    dispatch(deleteAlbum(data.id));
+                    
+                  }}
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </>
+            )}
           </div>
-        ) : (
-          <div className="buttonContainer">
-            <button
-              onClick={(e) => {
-                console.log(e.target);
-                setToggle(!toggle);
-              }}
-            >
-              EDIT
-            </button>
-            <button
-              onClick={(e) => {
-                console.log(e.target);
-              }}
-            >
-              DELETE
-            </button>
-          </div>
-        )}
+        ) : null}
       </div>
     </>
   );

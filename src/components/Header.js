@@ -1,8 +1,15 @@
 import React from 'react'
 
+import '../style/header.css'
 function Header() {
   return (
-    <div><h3>Header</h3></div>
+    <nav>
+      <h3> Albums-App</h3>
+      <h3><i class="fa-brands fa-github"></i></h3>
+    </nav>
+
+
+    
   )
 }
 
