@@ -1,45 +1,45 @@
-.albumCard{
-    width: 200px;
-    min-height: 150px;
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: aquamarine;
-    border-radius: 6px;
-    margin:5px;
-    box-shadow: 3px 3px #9f9c9c;
-    position: relative;
-    font-size: 15px;
-}   
-.buttonContainer{
-    position: absolute;
-    top:82%;
-    left:28%;
-    height: 100px;
-}
-.iconButton{
-    background-color: transparent;
-    margin: 0px 60px 0px 0px;
-    padding:1px;
-    width: 0px;
-    border: 0px;
-    font-size: 20px;
-}
-.iconButton:hover{
-   
-    font-size: 24px;
-}
-.iconButton:active{
-    
-    font-size: 22px;
+.albumCard {
+  width: 200px;
+  min-height: 150px;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 6px;
+  margin: 5px;
+  box-shadow: 3px 3px #f60202;
+  position: relative;
+  font-size: 15px;
 }
 
-.albumCard> input{
-    border-radius: 5px;
-    background-color: transparent;
-    padding:"10px 20px" ;
-    height: 40px;
-    width: 90%;
-    margin: auto;
+.albumCard > input {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: "10px 20px";
+  height: 40px;
+  width: 90%;
+  margin: auto;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 82%;
+  left: 28%;
+  height: 100px;
+}
+
+/* buttons desing */
+.iconButton {
+  background-color: transparent;
+  margin: 0px 60px 0px 0px;
+  padding: 1px;
+  width: 0px;
+  border: 0px;
+  font-size: 20px;
+}
+.iconButton:hover {
+  font-size: 24px;
+}
+.iconButton:active {
+  font-size: 22px;
 }

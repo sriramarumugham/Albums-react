@@ -1,17 +1,21 @@
-nav{
-    background-color: rgb(26, 25, 25);
-    height: 70px;
-    width:100%;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    
+nav {
+  background-color: rgb(26, 25, 25);
+  height: 70px;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
-nav>h3{
-    margin:0px 150px 0px 150px;
+nav > h3 {
+  margin: 0px 30px 0px 30px;
 }
-nav>h3>i{
-    font-size: 30px;
+
+nav > h3 > a {
+  text-decoration: none;
+  color: white;
+}
+nav > h3 > a>i {
+  font-size: 30px;
 }

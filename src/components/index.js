@@ -1,7 +1,8 @@
 import  Header  from './Header';
-import   Footer from './Footer';
 import AlbumCard from './AlbumCard';
 
-export {Header , Footer  ,AlbumCard};
+import Home from "../pages/Home";
+
+export {Header   ,AlbumCard ,Home};
 
 

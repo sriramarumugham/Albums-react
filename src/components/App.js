@@ -1,31 +1,33 @@
-import "../style/App.css";
-import { useEffect } from "react";
-
-import { useDispatch, useSelector } from "react-redux";
-
+//thunk from redux
 import { fetchAsyncAlbums } from "../features/albums/albumSlice";
 
+//components and pages
+import { Header, Home } from "../components/index";
 
-import Home from "../pages/Home";
+//hooks
+import { useEffect } from "react";
 
-import { Header, Footer } from "../components/index";
+//redux
+import { useDispatch } from "react-redux";
+
+//css  files
+import "../style/App.css";
 
 function App() {
-
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchAsyncAlbums());
-  }, [dispatch]);
 
-  
+    // fetch the data 
+    dispatch(fetchAsyncAlbums());
+    
+  }, [dispatch]);
 
   return (
     <div className="App">
       <Header />
       <Home />
-     
     </div>
   );
 }
