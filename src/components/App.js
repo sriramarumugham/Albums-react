@@ -10,8 +10,14 @@ import { useEffect } from "react";
 //redux
 import { useDispatch } from "react-redux";
 
+import {ToastContainer}from 'react-toastify';
+
+
 //css  files
 import "../style/App.css";
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -28,6 +34,7 @@ function App() {
     <div className="App">
       <Header />
       <Home />
+      <ToastContainer/>
     </div>
   );
 }

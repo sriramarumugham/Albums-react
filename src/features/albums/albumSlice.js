@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+import  {toast} from 'react-toastify';
 //state
 const initialState = {
   albums: [],
@@ -77,14 +78,24 @@ const albumSlice = createSlice({
   extraReducers: {
     [fetchAsyncAlbums.fulfilled]: (state, { payload }) => {
       console.log("fulfilled got the albums");
+
+      // toast("Fetched album")
+
       return { ...state, albums: payload };
     },
     [deleteAsyncAlbum.fulfilled]: () => {
-      console.log("deleted a album");
+
+      toast("Deleted");
+
+      console.log("Deleted");
       return;
     },
     [updateAsyncAlbum.fulfilled]: () => {
-      console.log("updated a album");
+
+      toast("Updated");
+
+      console.log("Updated");
+      
       return;
     },
   },

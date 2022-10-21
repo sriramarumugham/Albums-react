@@ -1,4 +1,30 @@
 # Getting Started with Create React App
+## hosted On vercel : https://albums-react.vercel.app/
+
+## About the app
+
+     This is a Album-app build with react and redux toolkit
+     Build with
+      1) React.js
+      2) Redux-toolkit
+      3) react-tostify for notifications
+      4) css
+
+     1) fetches album from api and stores it in redux store
+     2) update the state
+     3) deltes the state
+     
+     API used - https://jsonplaceholder.typicode.com/albums
+     API guide- https://jsonplaceholder.typicode.com/guide/
+
+##  Quick start
+
+    1) hover over the album, you will see the buttons to dlete a album and update the album
+    2) clicking on delte will dispatch delteAsyncThunk and deletes the album from the state
+    3) clicking on update will show a input to updat the album
+      1) clickin on cancel will take you back to the album
+      2) clicking on save will dispatch updateAsyncThunk and updates the state
+   
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
